@@ -230,6 +230,17 @@ button.swal2-confirm {
 	font-size: 1.5rem;
 	text-align: center;
 }
+
+.github {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	place-items: center;
+	position: absolute;
+	width: calc(100% - 40px);
+	bottom: 0;
+}
+
 /* General */
 
 #cardWrapper {
