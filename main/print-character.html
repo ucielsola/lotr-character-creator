@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/print-styles.css">
+
+    <!-- SweetAlert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+    <title>Print Character</title>
+</head>
+
+<body>
+    <div id="box" class="no-print">
+        <h3>Select Character</h3>
+        <select name="list" id="select" autocomplete="off" onchange="getCharacter(event)">
+            <option selected hidden disabled>Character...</option>
+        </select>
+        <button onclick="printPDF()">Print</button> <a href="index.html"><button>Back</button></a>
+    </div>
+
+    <div class="page" size="A4" id="printable">
+        <div class="block1">
+            <span class="inline"><img id="avatar" src="img/avatars/placeholder.png" alt=""></span>
+            <span id="header" class="border padding">
+                <span class="title">NAME</span>
+                <span class="title race">RACE</span> <br>
+
+                <span id="name"></span>
+                <span id="race" class='race'></span>
+                <span>
+                    <ul id="raceUl"></ul>
+                </span><br>
+            </span>
+        </div>
+        <div class="block2">
+            <span class="inline margin8"><img src="img/classes/placeholder.png" alt="" id="classIMG"></span>
+            <span class="border margin8 padding"> <span class="title">CLASS</span> <br>
+                <span id="class"></span>
+                <ul id="classUl">
+                </ul>
+            </span>
+
+            <span class="inline margin8"><img src="img/classes/placeholder.png" alt="" id="backIMG"></span>
+            <span class="border margin8 padding" id="backmarg"> <span class="title">BACKGROUND</span> <br>
+                <span id="background"></span>
+                <ul id="backUl"></ul>
+            </span>
+        </div>
+        <div class="block3">
+            <span class="border big padding flex"><span class="title">STATS </span><br>
+                <span class="col col1">
+                    <span class="fontBig">Healt: </span>
+                    <span class="fontBig" id="healthStats"></span><br>
+                    <span class="fontBig">Mana: </span>
+                    <span class="fontBig" id="manaStats"></span><br>
+                    <span class="fontBig">Strength: </span>
+                    <span class="fontBig" id="strengthStats"></span><br>
+                    <span class="fontBig">Dexterity: </span>
+                    <span class="fontBig" id="dexStats"></span><br>
+                </span>
+                <span class="col col2">
+                    <span class="fontBig">Speed: </span>
+                    <span class="fontBig" id="speedStats"></span><br>
+                    <span class="fontBig">Stealth: </span>
+                    <span class="fontBig" id="stealthStats"></span><br>
+                    <span class="fontBig">Charisma: </span>
+                    <span class="fontBig" id="charismaStats"></span><br>
+                    <span class="fontBig">Luck: </span>
+                    <span class="fontBig" id="luckStats"></span><br>
+                </span>
+
+
+
+
+            </span>
+        </div>
+
+        <div class="block3">
+            <span class="border big padding"> <span class="title">STORY</span><br>
+                <p id="story"></p>
+            </span>
+        </div>
+    </div>
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"
+        integrity="sha512-suUtSPkqYmFd5Ls30Nz6bjDX+TCcfEzhFfqjijfdggsaFZoylvTj+2odBzshs0TCwYrYZhQeCgHgJEkncb2YVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script type="text/javascript" src="print.js"></script>
+</body>
+
+</html>

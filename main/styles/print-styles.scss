@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(204, 204, 204);
+}
+
+#box {
+	display: grid;
+	align-items: center;
+	position: fixed;
+	width: 300px;
+	height: 200px;
+	float: left;
+	top: calc(50% - 100px);
+	left: 50px;
+	padding: 15px;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+	h3 {
+		font-size: 28px;
+		text-align: center;
+	}
+	select,
+	button {
+		width: 155px;
+		height: 30px;
+		font-size: 21px;
+		margin: auto;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+		text-align: center;
+	}
+}
+
+/*PRINT*/
+
+div.page {
+	background: white;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5cm;
+	padding: 1cm 2cm;
+	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+div.page[size='A4'] {
+	width: 21cm;
+	height: 25.7cm;
+}
+
+.block1 {
+	display: grid;
+	grid-template-columns: 0.4fr 1.6fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas: '. .';
+}
+
+.block2 {
+	display: grid;
+	grid-template-columns: 0.5fr 1.4fr 0.5fr 1.4fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas: '. . . .';
+	margin-top: 26px;
+	margin-bottom: 26px;
+}
+
+.block3 {
+	display: grid;
+	margin-bottom: 26px;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.border {
+	border: 1px solid black;
+}
+
+.margin8 {
+	margin-right: 8px;
+}
+
+.big {
+	width: 100%;
+	height: 280px;
+}
+
+.title {
+	padding: 15px;
+	font-size: 0.7rem;
+}
+
+.padding {
+	padding: 15px;
+}
+
+.smallfnt {
+	font-size: 0.7rem;
+}
+.flex {
+	display: flex;
+}
+
+.col {
+	margin-top: 35px;
+}
+
+.col2 {
+	margin-left: 200px;
+}
+#avatar {
+	height: 120px;
+	width: 125px;
+	margin-bottom: 2px;
+}
+
+#header {
+	position: relative;
+	height: 120px;
+}
+
+#backmarg {
+	margin-right: 0;
+}
+
+#story {
+	word-break: break-all;
+}
+
+.fontBig {
+	font-size: 1.5rem;
+	line-height: 3rem;
+}
+
+#name,
+#race,
+#class,
+#background {
+	font-size: 1.7rem;
+}
+
+.race {
+	margin-left: 96px;
+}
+
+ul {
+	display: inline-block;
+	position: relative;
+	margin-left: 25px;
+}
