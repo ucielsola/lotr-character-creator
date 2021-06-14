@@ -285,7 +285,7 @@ button.swal2-confirm {
           align-items: center;
   overflow: hidden;
   margin-left: 260px;
-  background-image: url("/main/img/bg.jpg");
+  background-image: url("../img/bg.jpg");
   background-position: center;
   background-size: auto;
   min-height: 100vh;
