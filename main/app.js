@@ -4,53 +4,6 @@ const TO_STAGE_5 = document.querySelectorAll('#toStage5');
 
 let character = {};
 
-const MALE_NAMES = [
-	'Elrond',
-	'Frodo',
-	'Glorfindel',
-	'Aragorn',
-	'Turin',
-	'Bolg',
-	'Azog',
-	'Uglúk',
-	'Gorbag',
-	'Fili',
-	'Kili',
-	'Gloin',
-	'Sam',
-	'Adanel',
-	'Aegnor',
-	'Belegorn',
-	'Bëorn',
-	'Bereth',
-	'Boromir',
-	'Cirdan',
-	'Lagduf',
-];
-
-const FEMALE_NAMES = [
-	'Arwen',
-	'Berylla',
-	'Camellia',
-	'Eowyn',
-	'Esmeralda',
-	'Freda',
-	'Galadriel',
-	'Tauriel',
-	'Goldberry',
-	'Luthien',
-	'Nimrodel',
-	'Yavanna',
-	'Nimrodel',
-	'Elenwë',
-	'Gilraen',
-	'Irimë',
-	'Uinen',
-	'Zamin',
-	'Mithrellas',
-	'Mairen',
-	'Isilmë',
-];
 // EVENTS
 
 $('#toStage1').on('click', () => {
@@ -79,18 +32,19 @@ $('#toStage2').on('click', () => {
 });
 
 $('#randomName').on('click', () => {
-	// select random name according to selected gender
+	// sets random name according to selected gender if gender is not in default state
 	let gender = $('#setGender option:selected').text();
+	const randomName = () => {
+		$.getJSON(`${gender.toLowerCase()}-names.json`, function (response, state) {
+			if (state === 'success') {
+				$('#setName').val(response[Math.floor(Math.random() * `${gender.toLowerCase()}-names.json`.length)]);
+			}
+		});
+	};
 
-	if (gender == `Character's Gender`) {
-		// returns error if gender is in default state
-		return errNoGender();
-	}
-
-	gender === 'Female'
-		? $('#setName').val(FEMALE_NAMES[Math.floor(Math.random() * FEMALE_NAMES.length)])
-		: $('#setName').val(MALE_NAMES[Math.floor(Math.random() * MALE_NAMES.length)]);
+	return gender === "Character's Gender" ? errNoGender() : randomName();
 });
+
 
 for (button of TO_STAGE_3) {
 	// adds RACE
