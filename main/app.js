@@ -10,6 +10,14 @@ $('#toStage1').on('click', () => {
 	nextStage(0);
 });
 
+$('#print').on('clicj', (e) => {
+	// prevents acces to print screen if localstorage is empty
+	if (localStorage.length) {
+		e.preventDefault();
+		noCharacters()
+	}
+});
+
 $('#toStage2').on('click', () => {
 	// sets NAME and GENDER
 	let setName = $('#setName').val();
@@ -44,7 +52,6 @@ $('#randomName').on('click', () => {
 
 	return gender === "Character's Gender" ? errNoGender() : randomName();
 });
-
 
 for (button of TO_STAGE_3) {
 	// adds RACE
@@ -248,6 +255,15 @@ function errNoGender() {
 	});
 }
 
+function errNoCharacters() {
+	Swal.fire({
+		icon: `error`,
+		html: `<h2 class="swal-title">You Shall Not Pass!</h2><br><span class="swal-txt">You need to create a Character, first`,
+		confirmButtonText: `<i class="fa fa-thumbs-up"></i> OK`,
+		confirmButtonAriaLabel: `OK`,
+	});
+}
+
 // RESETS
 function resetStatColors() {
 	//FIXME: JQUERY??
@@ -353,7 +369,6 @@ $('#easterEgg').on('click', () => {
 	Swal.fire({
 		title: `When you set to MAX your Character's STRENGTH and CHARISMA `,
 		imageUrl: 'img/egg.jpg',
-		imageWidth: 1300,
 		imageAlt: 'easter egg',
 	});
 });
