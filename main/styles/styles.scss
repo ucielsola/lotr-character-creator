@@ -145,9 +145,9 @@ button.swal2-confirm {
 /* Sidebar */
 .sidebar {
 	z-index: 100;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 1vw;
 	height: 100%;
-	width: 260px;
+	width: 16vw;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -156,20 +156,17 @@ button.swal2-confirm {
 	background-color: #210200;
 	background-image: url('https://www.transparenttextures.com/patterns/leather.png');
 	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-	> div,
-	h4 {
+	> h4 {
 		margin-bottom: 10px;
 	}
 
 	.mods {
 		display: flex;
-		padding-left: 10px;
-		padding-right: 10px;
-
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 5px;
 		img {
-			margin-top: -25px;
-			width: 96px;
-			padding: 10px;
+			width: 6vw;
 		}
 	}
 
@@ -188,17 +185,19 @@ button.swal2-confirm {
 		}
 	}
 
-	#avatar {
-		max-width: 220px;
-		max-height: 210px;
-		box-shadow: $box-shadow;
-		margin: 10px auto 16px auto;
+	.av-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		#avatar {
+			max-width: 10vw;
+		}
 	}
 }
 
 #characterStats {
 	display: none;
-	width: 218px;
 	font: $body-font;
 	color: $light-txt;
 }
@@ -233,12 +232,14 @@ button.swal2-confirm {
 
 .github {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	place-items: center;
 	position: absolute;
-	width: calc(100% - 40px);
-	bottom: 0;
+	width: max-content;
+	right: 15px;
+	top: 15px;
 }
 
 /* General */
@@ -248,7 +249,7 @@ button.swal2-confirm {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	margin-left: 260px; // avoid sidebar overlapping
+	margin-left: 16vw; // avoid sidebar overlapping
 	background-image: url('../img/bg.jpg');
 	background-position: center;
 	background-size: auto;
@@ -311,11 +312,12 @@ button.swal2-confirm {
 }
 #easterEgg {
 	position: absolute;
-	bottom: 165px;
-	right: 165px;
-	width: 150px;
+	bottom: 5vw;
+	right: 5vw;
+	width: 8vw;
 	cursor: pointer;
 }
+
 .rotate-scale-up {
 	-webkit-animation: rotate-scale-up 4s linear 5s infinite both;
 	animation: rotate-scale-up 4s linear 5s infinite both;
@@ -602,4 +604,24 @@ div.show-stats {
 
 .hide {
 	display: none;
+}
+
+// Media Querys
+
+@media screen and (max-width: 1440px) {
+	#avatar {
+		width: 9vw;
+	}
+	#nameRace,
+	#nameClass,
+	#nameBackground {
+		font-size: 1.2rem;
+	}
+	.avatar-stats,
+	.class-stats,
+	.back-stats,
+	#characterStats,
+	#sideStats {
+		font-size: 0.8rem;
+	}
 }

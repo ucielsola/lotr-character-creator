@@ -10,14 +10,6 @@ $('#toStage1').on('click', () => {
 	nextStage(0);
 });
 
-$('#print').on('clicj', (e) => {
-	// prevents acces to print screen if localstorage is empty
-	if (localStorage.length) {
-		e.preventDefault();
-		noCharacters()
-	}
-});
-
 $('#toStage2').on('click', () => {
 	// sets NAME and GENDER
 	let setName = $('#setName').val();
