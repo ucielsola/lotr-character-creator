@@ -21,11 +21,12 @@ $('#print').on('click', (e) => {
 $('#toStage2').on('click', () => {
 	// sets NAME and GENDER
 	let setName = $('#setName').val();
-	let setGender = $('#setGender option:selected').text();
+	let setGender = $('#setGender option:selected').data("gender");
 
 	if (setName.trim() == '') {
 		errNoName();
-	} else if (setGender == "Character's Gender") {
+	} else if (setGender == "default") {
+		console.log(setGender)
 		errNoGender();
 	} else {
 		// saves name and gender to global character
@@ -41,7 +42,7 @@ $('#toStage2').on('click', () => {
 
 $('#randomName').on('click', () => {
 	// sets random name according to selected gender if gender is not in default state
-	let gender = $('#setGender option:selected').text();
+	let gender = $('#setGender option:selected').data("gender");
 	const randomName = () => {
 		$.getJSON(`${gender.toLowerCase()}-names.json`, function (response, state) {
 			if (state === 'success') {
@@ -50,7 +51,7 @@ $('#randomName').on('click', () => {
 		});
 	};
 
-	return gender === "Character's Gender" ? errNoGender() : randomName();
+	return gender === "default" ? errNoGender() : randomName();
 });
 
 for (button of TO_STAGE_3) {
@@ -126,7 +127,7 @@ function prevStage(currentStage) {
 }
 
 function printGenderSymbol() {
-	return $('#setGender option:selected').text() == 'Female' ? ' ♀️' : ' ♂️';
+	return $('#setGender option:selected').data("gender") == 'Female' ? ' ♀️' : ' ♂️';
 }
 
 function showAtavatars(gender) {
@@ -167,7 +168,6 @@ function setStory(Story) {
 }
 
 function sidebarPrintMods(modType, modName) {
-	// FIXME: JQUERY??
 	// clon and print MODS Stats to the Sidebar
 	let currentStats = document.querySelector(`#${modName}Stats`);
 	let clonedStats = currentStats.cloneNode(true);

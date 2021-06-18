@@ -71,14 +71,15 @@
 	</div>
 	<div class="page-body" id="cardWrapper">
 		<img src="img/easter.gif" alt="Click Me!" id="easterEgg" class="rotate-scale-up ">
-		
+
 		<div class="card show-card" id="stage0">
 			<div class="card-title">
 				<h1>Lord of the Rings RPG</h1>
 				<h2>Character Builder</h2>
 			</div>
 			<div class="card-buttons">
-				<a href="print-character.html" target="_blank" id="print"><button class="button" title="Saved Characters">Saved
+				<a href="print-character.html" target="_blank" id="print"><button class="button"
+						title="Saved Characters">Saved
 						Characters</button></a>
 				<button class="button" title="Create Character" id="toStage1">Create Character</button>
 			</div>
@@ -96,9 +97,9 @@
 				</div>
 				<div class="select">
 					<select name="" id="setGender" autocomplete="off">
-						<option disabled selected hidden>Character's Gender</option>
-						<option>Male</option>
-						<option>Female</option>
+						<option disabled selected hidden data-gender="default">Character's Gender</option>
+						<option data-gender="Male">Male</option>
+						<option data-gender="Female">Female</option>
 					</select>
 					<span class="focus"></span>
 				</div>
