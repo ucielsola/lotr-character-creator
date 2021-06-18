@@ -207,7 +207,6 @@ function updateStats() {
 }
 
 function statsColors() {
-	// FIXME: JQUERY??
 	const STATS = document.querySelectorAll('.value');
 	const STATS_ARR = Array.from(STATS);
 	for (stat of STATS_ARR) {
@@ -266,7 +265,6 @@ function errNoCharacters() {
 
 // RESETS
 function resetStatColors() {
-	//FIXME: JQUERY??
 	const STATS = document.querySelectorAll('.value');
 	const STATS_ARR = Array.from(STATS);
 	for (stat of STATS_ARR) {
