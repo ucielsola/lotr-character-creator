@@ -648,7 +648,7 @@ div.show-stats {
 		min-height: 80vh;
 		width: 100vw;
 		font-family: sans-serif;
-		
+
 		h3 {
 			color: #ec9f22;
 			text-align: center;
@@ -664,10 +664,14 @@ div.show-stats {
 			font-size: 1.2rem;
 			font-weight: 600;
 			margin-inline: auto;
+			span {
+				font-style: italic;
+				color: #fff;
+			}
 		}
 		a {
 			text-decoration: none;
-			color: white;
+			color: #fff;
 		}
 	}
 }

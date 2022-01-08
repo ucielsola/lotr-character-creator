@@ -638,8 +638,12 @@ div.show-stats {
     font-weight: 600;
     margin-inline: auto;
   }
+  .disclaimer p span {
+    font-style: italic;
+    color: #fff;
+  }
   .disclaimer a {
     text-decoration: none;
-    color: white;
+    color: #fff;
   }
 }/*# sourceMappingURL=styles.css.map */
