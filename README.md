@@ -12,7 +12,7 @@ You can choose a Name, Gender, Race, Class, Background and a custom Story for yo
 
 ## Live Demo
 
-[ucielsola.com/lotr-character-creator](ucielsola.com/lotr-character-creator)
+[lotr-cc.ucielsola.com](https://lotr-cc.ucielsola.com)
 
 ## External Resources
 
