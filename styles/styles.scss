@@ -1,8 +1,8 @@
 /* ***
  * VARIABLES *  
  *** */
-$title-font: 1.8rem 'Salsa', cursive;
-$body-font: 1rem 'Play', sans-serif;
+$title-font: 1.8rem "Salsa", cursive;
+$body-font: 1rem "Play", sans-serif;
 $light-txt: rgb(255, 217, 181);
 $txt-shadow: 0px 2px 3px rgba(255, 217, 181, 0.15);
 $dark-bg: #1b100c;
@@ -15,7 +15,8 @@ $pos-val: rgb(59, 241, 59);
 $neg-val: rgb(236, 74, 74);
 $def-val: rgb(216, 194, 70);
 $border-radius: 5px;
-$box-shadow: 0 19px 38px rgba(36, 24, 8, 0.23), 0 15px 12px rgba(46, 33, 15, 0.15);
+$box-shadow: 0 19px 38px rgba(36, 24, 8, 0.23),
+	0 15px 12px rgba(46, 33, 15, 0.15);
 /* ***
   * RESETS *  
   *** */
@@ -128,7 +129,7 @@ button.swal2-confirm {
 	}
 	/* Arrow */
 	::after {
-		content: '\25BC';
+		content: "\25BC";
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -154,7 +155,7 @@ button.swal2-confirm {
 	overflow-x: hidden;
 	border-right: 3px solid black;
 	background-color: #210200;
-	background-image: url('https://www.transparenttextures.com/patterns/leather.png');
+	background-image: url("https://www.transparenttextures.com/patterns/leather.png");
 	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 	> h4 {
 		margin-bottom: 10px;
@@ -250,7 +251,7 @@ button.swal2-confirm {
 	align-items: center;
 	overflow: hidden;
 	margin-left: 16vw; // avoid sidebar overlapping
-	background-image: url('../img/bg.jpg');
+	background-image: url("../img/bg.jpg");
 	background-position: center;
 	background-size: auto;
 	min-height: 100vh;
@@ -510,7 +511,7 @@ button.swal2-confirm {
 			font-size: 1.3rem;
 			border-radius: 10px;
 			background-color: #4d2a00;
-			background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png');
+			background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
 		}
 		#charcount {
 			font: $body-font;
@@ -623,5 +624,50 @@ div.show-stats {
 	#characterStats,
 	#sideStats {
 		font-size: 0.8rem;
+	}
+}
+
+// disclaimer
+.disclaimer {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.sidebar,
+	.github,
+	.page-body,
+	#cardWrapper {
+		display: none;
+	}
+	html {
+		background-color: #6e6353;
+	}
+	.disclaimer {
+		display: grid;
+		place-content: center;
+		min-height: 80vh;
+		width: 100vw;
+		font-family: sans-serif;
+		
+		h3 {
+			color: #ec9f22;
+			text-align: center;
+			font-size: 2rem;
+			font-weight: 700;
+		}
+		p {
+			color: #f1ad3f;
+			margin-top: 2rem;
+			min-width: 300px;
+			width: 50%;
+			text-align: left;
+			font-size: 1.2rem;
+			font-weight: 600;
+			margin-inline: auto;
+		}
+		a {
+			text-decoration: none;
+			color: white;
+		}
 	}
 }

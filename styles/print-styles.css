@@ -3,8 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,11 +11,8 @@ body {
 }
 
 #box {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: fixed;
   width: 230px;
   height: 200px;
@@ -26,15 +22,12 @@ body {
   padding: 15px;
   border-radius: 10px;
   background: white;
-  -webkit-box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
-
 #box h3 {
   font-size: 28px;
   text-align: center;
 }
-
 #box select,
 #box button {
   width: 155px;
@@ -42,7 +35,6 @@ body {
   font-size: 21px;
   margin: auto;
 }
-
 #box a {
   text-decoration: none;
   color: black;
@@ -56,41 +48,33 @@ div.page {
   margin: 0 auto;
   margin-bottom: 0.5cm;
   padding: 1cm 2cm;
-  -webkit-box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 
-div.page[size='A4'] {
+div.page[size=A4] {
   width: 21cm;
   height: 25.7cm;
 }
 
 .block1 {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.4fr 1.6fr;
-      grid-template-columns: 0.4fr 1.6fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
-      grid-template-areas: '. .';
+  grid-template-areas: ". .";
 }
 
 .block2 {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.5fr 1.4fr 0.5fr 1.4fr;
-      grid-template-columns: 0.5fr 1.4fr 0.5fr 1.4fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 0.5fr 1.4fr 0.5fr 1.4fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
-      grid-template-areas: '. . . .';
+  grid-template-areas: ". . . .";
   margin-top: 26px;
   margin-bottom: 26px;
 }
 
 .block3 {
-  display: -ms-grid;
   display: grid;
   margin-bottom: 26px;
 }
@@ -126,8 +110,6 @@ div.page[size='A4'] {
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -146,8 +128,6 @@ div.page[size='A4'] {
 }
 
 #header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   height: 120px;
@@ -185,5 +165,4 @@ ul {
   display: inline-block;
   position: relative;
   margin-left: 25px;
-}
-/*# sourceMappingURL=print-styles.css.map */
+}/*# sourceMappingURL=print-styles.css.map */

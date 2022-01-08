@@ -1,419 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" id="favicon" href="img/avatars/placeholder.png" type="image/x-icon">
-	<link rel="stylesheet" href="styles/styles.css">
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Play&family=Salsa&display=swap" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-		integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-	<!-- SweetAlert 2 -->
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
-	<link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" id="favicon" href="img/avatars/placeholder.png" type="image/x-icon">
+		<link rel="stylesheet" href="styles/styles.css">
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Play&family=Salsa&display=swap" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+		<!-- SweetAlert 2 -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+		<link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 
-	<title>Proyecto Final - Uciel Sola</title>
-</head>
+		<title>Proyecto Final - Uciel Sola</title>
+	</head>
 
-<body>
-
-	<!--          SIDEBAR            -->
-
-	<div class="sidebar" id="sidebar">
-		<div class="av-container">
-			<img src="img/avatars/placeholder.png" id="avatar">
+	
+	<body>
+		<div class="disclaimer">
+			<h3>About this project</h3>
+			<p>Hi! This is the first website I've ever made. So, by that time, I hadn't any clue about responsive design, mobile
+				first, or whatsoever. This 'Lord Of the Rings Character Creator' will not work on small screens (mobile devices),
+				sorry for that.</p>
+				<p>You can search on my portfolio for other (more recent) projects at <a href="https://ucielsola.com">UcielSola.com</a></p>
 		</div>
-		<div class="mods">
-			<img src="img/classes/placeholder.png" alt="" class="mod-img" id="classImg">
-			<img src="img/backgrounds/placeholder.png" alt="" class="mod-img" id="backImg">
-		</div>
-		<h3 id="sideName">Name</h3>
+		
+		<!--          SIDEBAR            -->
 
-		<h4 id="nameRace"></h4>
-		<div id="sideRace"></div>
-
-		<h4 id="nameClass"></h4>
-		<div id="sideClass"></div>
-
-		<h4 id="nameBackground"></h4>
-		<div id="sideBackground"></div>
-
-		<div class="" id="characterStats">
-			<h4 class="stats-title">Stats</h4>
-			<span>Health :</span><span class="value" id="healthValue">10</span> <br>
-			<span>Mana :</span><span class="value" id="manaValue">10</span> <br>
-			<span>Strength :</span><span class="value" id="strengthValue">10</span> <br>
-			<span>Dexterity :</span><span class="value" id="dexValue">10</span> <br>
-			<span>Speed :</span><span class="value" n id="speedValue">10</span> <br>
-			<span>Stealth :</span><span class="value" id="stealthValue">10</span> <br>
-			<span>Charisma :</span><span class="value" id="charValue">10</span> <br>
-			<span>Luck :</span><span class="value" id="luckValue">10</span>
-		</div>
-
-	</div>
-
-	<!--          BODY            -->
-	<div class="github">
-
-		<a class="github-button" href="https://github.com/ucielsola"
-			data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large"
-			aria-label="Follow @ucielsola on GitHub">@ucielsola</a>
-
-		<a class="github-button" href="https://github.com/ucielsola/lotr-character-creator/archive/HEAD.zip"
-			data-color-scheme="no-preference: light; light: dark; dark: dark;" data-icon="octicon-download"
-			data-size="large" aria-label="Download ucielsola/lotr-character-creator on GitHub">Download</a>
-
-	</div>
-	<div class="page-body" id="cardWrapper">
-		<img src="img/easter.gif" alt="Click Me!" id="easterEgg" class="rotate-scale-up ">
-
-		<div class="card show-card" id="stage0">
-			<div class="card-title">
-				<h1>Lord of the Rings RPG</h1>
-				<h2>Character Builder</h2>
+		<div class="sidebar" id="sidebar">
+			<div class="av-container">
+				<img src="img/avatars/placeholder.png" id="avatar">
 			</div>
-			<div class="card-buttons">
-				<a href="print-character.html" target="_blank" id="print"><button class="button"
-						title="Saved Characters">Saved
-						Characters</button></a>
-				<button class="button" title="Create Character" id="toStage1">Create Character</button>
+			<div class="mods">
+				<img src="img/classes/placeholder.png" alt="" class="mod-img" id="classImg">
+				<img src="img/backgrounds/placeholder.png" alt="" class="mod-img" id="backImg">
 			</div>
+			<h3 id="sideName">Name</h3>
+
+			<h4 id="nameRace"></h4>
+			<div id="sideRace"></div>
+
+			<h4 id="nameClass"></h4>
+			<div id="sideClass"></div>
+
+			<h4 id="nameBackground"></h4>
+			<div id="sideBackground"></div>
+
+			<div class="" id="characterStats">
+				<h4 class="stats-title">Stats</h4>
+				<span>Health :</span><span class="value" id="healthValue">10</span> <br>
+				<span>Mana :</span><span class="value" id="manaValue">10</span> <br>
+				<span>Strength :</span><span class="value" id="strengthValue">10</span> <br>
+				<span>Dexterity :</span><span class="value" id="dexValue">10</span> <br>
+				<span>Speed :</span><span class="value" n id="speedValue">10</span> <br>
+				<span>Stealth :</span><span class="value" id="stealthValue">10</span> <br>
+				<span>Charisma :</span><span class="value" id="charValue">10</span> <br>
+				<span>Luck :</span><span class="value" id="luckValue">10</span>
+			</div>
+
 		</div>
 
+		<!--          BODY            -->
+		<div class="github">
 
-		<div class="card" id="stage1">
-			<div class="card-title">
-				<h3>Choose your character' s <br><strong>name</strong> and <strong>gender</strong></h3>
-			</div>
-			<div class="card-content">
-				<div class="input">
-					<input type="text" placeholder="Character Name" id="setName" autocomplete="off">
-					<button id="randomName" title="Random Name"><i class="fas fa-random"></i></button>
-				</div>
-				<div class="select">
-					<select name="" id="setGender" autocomplete="off">
-						<option disabled selected hidden data-gender="default">Character's Gender</option>
-						<option data-gender="Male">Male</option>
-						<option data-gender="Female">Female</option>
-					</select>
-					<span class="focus"></span>
+			<a class="github-button" href="https://github.com/ucielsola"
+				data-color-scheme="no-preference: dark; light: light; dark: dark;" data-size="large"
+				aria-label="Follow @ucielsola on GitHub">@ucielsola</a>
+
+			<a class="github-button" href="https://github.com/ucielsola/lotr-character-creator/archive/HEAD.zip"
+				data-color-scheme="no-preference: light; light: dark; dark: dark;" data-icon="octicon-download"
+				data-size="large" aria-label="Download ucielsola/lotr-character-creator on GitHub">Download</a>
+
+		</div>
+		<div class="page-body" id="cardWrapper">
+			<img src="img/easter.gif" alt="Click Me!" id="easterEgg" class="rotate-scale-up ">
+
+			<div class="card show-card" id="stage0">
+				<div class="card-title">
+					<h1>Lord of the Rings RPG</h1>
+					<h2>Character Builder</h2>
 				</div>
 				<div class="card-buttons">
-					<button class="button" title="back" onclick="prevStage(1)">back</button>
-					<button class="button" title="Continue" id="toStage2">Continue</button>
+					<a href="print-character.html" target="_blank" id="print"><button class="button"
+							title="Saved Characters">Saved
+							Characters</button></a>
+					<button class="button" title="Create Character" id="toStage1">Create Character</button>
 				</div>
 			</div>
-		</div>
 
-		<!--  -->
 
-		<div class="card" id="stage2">
-			<div class="card-title">
-				<h3>Choose your character's <strong>Race</strong></h3>
-			</div>
-			<div class="card-content">
-				<div class="avatars" id="avatars">
-					<div class="avatar-wrapper">
-						<input type="image" class="Male avatar" src="img/avatars/MaleDwarf.png">
-						<input type="image" class="Female avatar" src="img/avatars/FemaleDwarf.png">
-						<h4 class="avatar-title">Dwarf</h4>
-						<div class="stats-wrapper">
-							<div id="DwarfStats">
-								<span class="avatar-stats">Speaks <span class="tongue">Common
-										tongue</span></span><br>
-								<span class="avatar-stats">Speaks<span class="tongue"> secret Dwarf
-										tongue</span></span><br>
-								<span class="avatar-stats">Treasure Hunter:<span class="stats-pos-value">Luck +
-										5</span></span><br>
-								<span class="avatar-stats">Short Legs:<span class="stats-neg-value">Speed -
-										3</span></span>
-							</div>
-							<div class="race-button"><button class="button" value="Dwarf"
-									id="toStage3">Continue</button>
-							</div>
-						</div>
+			<div class="card" id="stage1">
+				<div class="card-title">
+					<h3>Choose your character' s <br><strong>name</strong> and <strong>gender</strong></h3>
+				</div>
+				<div class="card-content">
+					<div class="input">
+						<input type="text" placeholder="Character Name" id="setName" autocomplete="off">
+						<button id="randomName" title="Random Name"><i class="fas fa-random"></i></button>
 					</div>
-					<div class="avatar-wrapper">
-						<input type="image" class="Male avatar" src="img/avatars/MaleElf.png">
-						<input type="image" class="Female avatar" src="img/avatars/FemaleElf.png">
-						<h4 class="avatar-title">Elf</h4>
-						<div class="stats-wrapper">
-							<div id="ElfStats">
-								<span class="avatar-stats">Speaks <span class="tongue">Common tongue</span></span><br>
-								<span class="avatar-stats">Speaks <span class="tongue">secret Elvish
-										tongue</span></span><br>
-								<span class="avatar-stats">Lembas Bread: <span class="stats-pos-value">Health +
-										5</span></span><br>
-								<span class="avatar-stats">Arrogance: <span class="stats-neg-value">Charisma -
-										3</span></span>
-							</div>
-							<div class="race-button"><button class="button" value="Elf" id="toStage3">Continue</button>
-							</div>
-						</div>
+					<div class="select">
+						<select name="" id="setGender" autocomplete="off">
+							<option disabled selected hidden data-gender="default">Character's Gender</option>
+							<option data-gender="Male">Male</option>
+							<option data-gender="Female">Female</option>
+						</select>
+						<span class="focus"></span>
 					</div>
-					<div class="avatar-wrapper">
-						<input type="image" class="Male avatar" src="img/avatars/MaleHobbit.png">
-						<input type="image" class="Female avatar" src="img/avatars/FemaleHobbit.png">
-						<h4 class="avatar-title">Hobbit</h4>
-						<div class="stats-wrapper">
-							<div id="HobbitStats">
-								<span class="avatar-stats">Speaks <span class="tongue">Common tongue</span></span><br>
-								<span class="avatar-stats">Can learn <span class="tongue">Elvish
-										tongue</span></span><br>
-								<span class="avatar-stats">Light Footed: <span class="stats-pos-value">Stealth +
-										5</span></span><br>
-								<span class="avatar-stats">Food Carrier: <span class="stats-neg-value">Speed -
-										3</span></span>
-							</div>
-							<div class="race-button"><button class="button" value="Hobbit"
-									id="toStage3">Continue</button>
-							</div>
-						</div>
-					</div>
-					<div class="avatar-wrapper">
-						<input type="image" class="Male avatar" src="img/avatars/MaleHuman.png">
-						<input type="image" class="Female avatar" src="img/avatars/FemaleHuman.png">
-						<h4 class="avatar-title">Human</h4>
-						<div class="stats-wrapper">
-							<div id="HumanStats">
-								<span class="avatar-stats">Speaks <span class="tongue">Common tongue</span></span><br>
-								<span class="avatar-stats">Can learn <span class="tongue">Elvish
-										tongue</span></span><br>
-								<span class="avatar-stats">Kingsman: <span class="stats-pos-value">Dexterity +
-										5</span></span><br>
-								<span class="avatar-stats">Heavy Armor: <span class="stats-neg-value">Stealth -
-										3</span></span>
-							</div>
-							<div class="race-button"><button class="button" value="Human"
-									id="toStage3">Continue</button>
-							</div>
-						</div>
-					</div>
-					<div class="avatar-wrapper">
-						<input type="image" class="Male avatar" src="img/avatars/MaleOrc.png">
-						<input type="image" class="Female avatar" src="img/avatars/FemaleOrc.png">
-						<h4 class="avatar-title">Orc</h4>
-						<div class="stats-wrapper">
-							<div id="OrcStats">
-								<span class="avatar-stats">Speaks <span class="tongue">Common tongue</span></span><br>
-								<span class="avatar-stats">Speaks <span class="tongue">secret Orc
-										tongue</span></span><br>
-								<span class="avatar-stats">Survivor: <span class="stats-pos-value">Strength +
-										5</span></span><br>
-								<span class="avatar-stats">Fear of Light: <span class="stats-neg-value">Mana -
-										3</span></span>
-							</div>
-							<div class="race-button"><button class="button" value="Orc" id="toStage3">Continue</button>
-							</div>
-						</div>
+					<div class="card-buttons">
+						<button class="button" title="back" onclick="prevStage(1)">back</button>
+						<button class="button" title="Continue" id="toStage2">Continue</button>
 					</div>
 				</div>
 			</div>
-			<div class="card-buttons">
-				<button class="button" title="back" onclick="prevStage(2)">back</button>
-			</div>
-		</div>
 
-		<!--  -->
+			<!--  -->
 
-		<div class="card" id="stage3">
-			<div class="card-title">
-				<h3>Choose your character's <strong>Class</strong></h3>
-			</div>
-			<div class="card-content">
-				<div class="classes">
-					<div class="class-wrapper">
-						<input type="image" class="class-icon" src="img/classes/Farmer.png">
-						<h4 class="class-title">Farmer</h4>
-						<div class="stats-wrapper">
-							<div id="FarmerStats">
-								<span class="class-stats">Quality Food: <span class="stats-pos-value">Health +
-										4</span></span><br>
-								<span class="class-stats">Hard Worker: <span class="stats-pos-value">Strength +
-										2</span></span>
-							</div>
-							<div class="class-button"><button class="button" value="Farmer"
-									id="toStage4">Continue</button>
+			<div class="card" id="stage2">
+				<div class="card-title">
+					<h3>Choose your character's <strong>Race</strong></h3>
+				</div>
+				<div class="card-content">
+					<div class="avatars" id="avatars">
+						<div class="avatar-wrapper">
+							<input type="image" class="Male avatar" src="img/avatars/MaleDwarf.png">
+							<input type="image" class="Female avatar" src="img/avatars/FemaleDwarf.png">
+							<h4 class="avatar-title">Dwarf</h4>
+							<div class="stats-wrapper">
+								<div id="DwarfStats">
+									<span class="avatar-stats">Speaks <span class="tongue">Common
+											tongue</span></span><br>
+									<span class="avatar-stats">Speaks<span class="tongue"> secret Dwarf
+											tongue</span></span><br>
+									<span class="avatar-stats">Treasure Hunter:<span class="stats-pos-value">Luck +
+											5</span></span><br>
+									<span class="avatar-stats">Short Legs:<span class="stats-neg-value">Speed -
+											3</span></span>
+								</div>
+								<div class="race-button"><button class="button" value="Dwarf"
+										id="toStage3">Continue</button>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="class-wrapper">
-						<input type="image" class="class-icon" src="img/classes/Hunter.png">
-						<h4 class="class-title">Hunter</h4>
-						<div class="stats-wrapper">
-							<div id="HunterStats">
-								<span class="class-stats">Dead Eye: <span class="stats-pos-value">Luck +
-										4</span></span><br>
-								<span class="class-stats">Furtiveness: <span class="stats-pos-value">Stealth +
-										2</span></span>
-							</div>
-							<div class="class-button"><button class="button" value="Hunter"
-									id="toStage4">Continue</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="class-wrapper">
-						<input type="image" class="class-icon" src="img/classes/Warrior.png">
-						<h4 class="class-title">Warrior</h4>
-						<div class="stats-wrapper">
-							<div id="WarriorStats">
-								<span class="class-stats">Trained Soldier: <span class="stats-pos-value">Strength +
-										4</span></span><br>
-								<span class="class-stats">Camouflage: <span class="stats-pos-value">Stealth +
-										2</span></span>
-							</div>
-							<div class="class-button"><button class="button" value="Warrior"
-									id="toStage4">Continue</button>
+						<div class="avatar-wrapper">
+							<input type="image" class="Male avatar" src="img/avatars/MaleElf.png">
+							<input type="image" class="Female avatar" src="img/avatars/FemaleElf.png">
+							<h4 class="avatar-title">Elf</h4>
+							<div class="stats-wrapper">
+								<div id="ElfStats">
+									<span class="avatar-stats">Speaks <span class="tongue">Common
+											tongue</span></span><br>
+									<span class="avatar-stats">Speaks <span class="tongue">secret Elvish
+											tongue</span></span><br>
+									<span class="avatar-stats">Lembas Bread: <span class="stats-pos-value">Health +
+											5</span></span><br>
+									<span class="avatar-stats">Arrogance: <span class="stats-neg-value">Charisma -
+											3</span></span>
+								</div>
+								<div class="race-button"><button class="button" value="Elf"
+										id="toStage3">Continue</button>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="class-wrapper">
-						<input type="image" class="class-icon" src="img/classes/Wizard.png">
-						<h4 class="class-title">Wizard</h4>
-						<div class="stats-wrapper">
-							<div id="WizardStats">
-								<span class="class-stats">Meditation: <span class="stats-pos-value">Mana +
-										4</span></span><br>
-								<span class="class-stats">Enchanter: <span class="stats-pos-value">Charisma +
-										2</span></span>
+						<div class="avatar-wrapper">
+							<input type="image" class="Male avatar" src="img/avatars/MaleHobbit.png">
+							<input type="image" class="Female avatar" src="img/avatars/FemaleHobbit.png">
+							<h4 class="avatar-title">Hobbit</h4>
+							<div class="stats-wrapper">
+								<div id="HobbitStats">
+									<span class="avatar-stats">Speaks <span class="tongue">Common
+											tongue</span></span><br>
+									<span class="avatar-stats">Can learn <span class="tongue">Elvish
+											tongue</span></span><br>
+									<span class="avatar-stats">Light Footed: <span class="stats-pos-value">Stealth +
+											5</span></span><br>
+									<span class="avatar-stats">Food Carrier: <span class="stats-neg-value">Speed -
+											3</span></span>
+								</div>
+								<div class="race-button"><button class="button" value="Hobbit"
+										id="toStage3">Continue</button>
+								</div>
 							</div>
-							<div class="class-button"><button class="button" value="Wizard"
-									id="toStage4">Continue</button>
+						</div>
+						<div class="avatar-wrapper">
+							<input type="image" class="Male avatar" src="img/avatars/MaleHuman.png">
+							<input type="image" class="Female avatar" src="img/avatars/FemaleHuman.png">
+							<h4 class="avatar-title">Human</h4>
+							<div class="stats-wrapper">
+								<div id="HumanStats">
+									<span class="avatar-stats">Speaks <span class="tongue">Common
+											tongue</span></span><br>
+									<span class="avatar-stats">Can learn <span class="tongue">Elvish
+											tongue</span></span><br>
+									<span class="avatar-stats">Kingsman: <span class="stats-pos-value">Dexterity +
+											5</span></span><br>
+									<span class="avatar-stats">Heavy Armor: <span class="stats-neg-value">Stealth -
+											3</span></span>
+								</div>
+								<div class="race-button"><button class="button" value="Human"
+										id="toStage3">Continue</button>
+								</div>
+							</div>
+						</div>
+						<div class="avatar-wrapper">
+							<input type="image" class="Male avatar" src="img/avatars/MaleOrc.png">
+							<input type="image" class="Female avatar" src="img/avatars/FemaleOrc.png">
+							<h4 class="avatar-title">Orc</h4>
+							<div class="stats-wrapper">
+								<div id="OrcStats">
+									<span class="avatar-stats">Speaks <span class="tongue">Common
+											tongue</span></span><br>
+									<span class="avatar-stats">Speaks <span class="tongue">secret Orc
+											tongue</span></span><br>
+									<span class="avatar-stats">Survivor: <span class="stats-pos-value">Strength +
+											5</span></span><br>
+									<span class="avatar-stats">Fear of Light: <span class="stats-neg-value">Mana -
+											3</span></span>
+								</div>
+								<div class="race-button"><button class="button" value="Orc"
+										id="toStage3">Continue</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="card-buttons">
+					<button class="button" title="back" onclick="prevStage(2)">back</button>
+				</div>
 			</div>
-			<div class="card-buttons">
-				<button class="button" title="back" onclick="prevStage(3)">back</button>
-			</div>
-		</div>
 
-		<!--  -->
+			<!--  -->
 
-		<div class="card" id="stage4">
-			<div class="card-title">
-				<h3>Choose your character's <strong>Background</strong></h3>
-			</div>
-			<div class="card-content">
-				<div class="backgrounds">
-					<div class="back-wrapper">
-						<input type="image" class="back-icon" src="img/backgrounds/Isengardian.png">
-						<h4 class="back-title">Isengardian</h4>
-						<div class="stats-wrapper">
-							<div id="IsengardianStats">
-								<span class="back-stats">White Hand: <span class="stats-pos-value">Strength +
-										2</span></span><br>
-								<span class="back-stats">Jealous Master: <span class="stats-neg-value">Mana -
-										2</span></span>
-							</div>
-							<div class="back-button"><button class="button" value="Isengardian"
-									id="toStage5">Continue</button>
+			<div class="card" id="stage3">
+				<div class="card-title">
+					<h3>Choose your character's <strong>Class</strong></h3>
+				</div>
+				<div class="card-content">
+					<div class="classes">
+						<div class="class-wrapper">
+							<input type="image" class="class-icon" src="img/classes/Farmer.png">
+							<h4 class="class-title">Farmer</h4>
+							<div class="stats-wrapper">
+								<div id="FarmerStats">
+									<span class="class-stats">Quality Food: <span class="stats-pos-value">Health +
+											4</span></span><br>
+									<span class="class-stats">Hard Worker: <span class="stats-pos-value">Strength +
+											2</span></span>
+								</div>
+								<div class="class-button"><button class="button" value="Farmer"
+										id="toStage4">Continue</button>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="back-wrapper">
-						<input type="image" class="back-icon" src="img/backgrounds/Noble.png">
-						<h4 class="back-title">Noble</h4>
-						<div class="stats-wrapper">
-							<div id="NobleStats">
-								<span class="back-stats">Well Educated: <span class="stats-pos-value">Charisma +
-										2</span></span><br>
-								<span class="back-stats">Bookworm: <span class="stats-neg-value">Strength -
-										2</span></span>
-							</div>
-							<div class="back-button"><button class="button" value="Noble"
-									id="toStage5">Continue</button>
+						<div class="class-wrapper">
+							<input type="image" class="class-icon" src="img/classes/Hunter.png">
+							<h4 class="class-title">Hunter</h4>
+							<div class="stats-wrapper">
+								<div id="HunterStats">
+									<span class="class-stats">Dead Eye: <span class="stats-pos-value">Luck +
+											4</span></span><br>
+									<span class="class-stats">Furtiveness: <span class="stats-pos-value">Stealth +
+											2</span></span>
+								</div>
+								<div class="class-button"><button class="button" value="Hunter"
+										id="toStage4">Continue</button>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="back-wrapper">
-						<input type="image" class="back-icon" src="img/backgrounds/Thief.png">
-						<h4 class="back-title">Thief</h4>
-						<div class="stats-wrapper">
-							<div id="ThiefStats">
-								<span class="back-stats">Experienced: <span class="stats-pos-value">Stealth +
-										2</span></span><br>
-								<span class="back-stats">Low Faith: <span class="stats-neg-value">Mana - 2</span></span>
-							</div>
-							<div class="back-button"><button class="button" value="Thief"
-									id="toStage5">Continue</button>
+						<div class="class-wrapper">
+							<input type="image" class="class-icon" src="img/classes/Warrior.png">
+							<h4 class="class-title">Warrior</h4>
+							<div class="stats-wrapper">
+								<div id="WarriorStats">
+									<span class="class-stats">Trained Soldier: <span class="stats-pos-value">Strength +
+											4</span></span><br>
+									<span class="class-stats">Camouflage: <span class="stats-pos-value">Stealth +
+											2</span></span>
+								</div>
+								<div class="class-button"><button class="button" value="Warrior"
+										id="toStage4">Continue</button>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="back-wrapper">
-						<input type="image" class="back-icon" src="img/backgrounds/Wanderer.png">
-						<h4 class="back-title">Wanderer</h4>
-						<div class="stats-wrapper">
-							<div id="WandererStats">
-								<span class="back-stats">Watchful Eye: <span class="stats-pos-value">Look
-										+2</span></span><br>
-								<span class="back-stats">Ragged Clothes: <span class="stats-neg-value">Charisma -
-										2</span></span>
-							</div>
-							<div class="back-button"><button class="button" value="Wanderer"
-									id="toStage5">Continue</button>
+						<div class="class-wrapper">
+							<input type="image" class="class-icon" src="img/classes/Wizard.png">
+							<h4 class="class-title">Wizard</h4>
+							<div class="stats-wrapper">
+								<div id="WizardStats">
+									<span class="class-stats">Meditation: <span class="stats-pos-value">Mana +
+											4</span></span><br>
+									<span class="class-stats">Enchanter: <span class="stats-pos-value">Charisma +
+											2</span></span>
+								</div>
+								<div class="class-button"><button class="button" value="Wizard"
+										id="toStage4">Continue</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="card-buttons">
+					<button class="button" title="back" onclick="prevStage(3)">back</button>
+				</div>
 			</div>
-			<div class="card-buttons">
-				<button class="button" title="back" onclick="prevStage(4)">back</button>
+
+			<!--  -->
+
+			<div class="card" id="stage4">
+				<div class="card-title">
+					<h3>Choose your character's <strong>Background</strong></h3>
+				</div>
+				<div class="card-content">
+					<div class="backgrounds">
+						<div class="back-wrapper">
+							<input type="image" class="back-icon" src="img/backgrounds/Isengardian.png">
+							<h4 class="back-title">Isengardian</h4>
+							<div class="stats-wrapper">
+								<div id="IsengardianStats">
+									<span class="back-stats">White Hand: <span class="stats-pos-value">Strength +
+											2</span></span><br>
+									<span class="back-stats">Jealous Master: <span class="stats-neg-value">Mana -
+											2</span></span>
+								</div>
+								<div class="back-button"><button class="button" value="Isengardian"
+										id="toStage5">Continue</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="back-wrapper">
+							<input type="image" class="back-icon" src="img/backgrounds/Noble.png">
+							<h4 class="back-title">Noble</h4>
+							<div class="stats-wrapper">
+								<div id="NobleStats">
+									<span class="back-stats">Well Educated: <span class="stats-pos-value">Charisma +
+											2</span></span><br>
+									<span class="back-stats">Bookworm: <span class="stats-neg-value">Strength -
+											2</span></span>
+								</div>
+								<div class="back-button"><button class="button" value="Noble"
+										id="toStage5">Continue</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="back-wrapper">
+							<input type="image" class="back-icon" src="img/backgrounds/Thief.png">
+							<h4 class="back-title">Thief</h4>
+							<div class="stats-wrapper">
+								<div id="ThiefStats">
+									<span class="back-stats">Experienced: <span class="stats-pos-value">Stealth +
+											2</span></span><br>
+									<span class="back-stats">Low Faith: <span class="stats-neg-value">Mana -
+											2</span></span>
+								</div>
+								<div class="back-button"><button class="button" value="Thief"
+										id="toStage5">Continue</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="back-wrapper">
+							<input type="image" class="back-icon" src="img/backgrounds/Wanderer.png">
+							<h4 class="back-title">Wanderer</h4>
+							<div class="stats-wrapper">
+								<div id="WandererStats">
+									<span class="back-stats">Watchful Eye: <span class="stats-pos-value">Look
+											+2</span></span><br>
+									<span class="back-stats">Ragged Clothes: <span class="stats-neg-value">Charisma -
+											2</span></span>
+								</div>
+								<div class="back-button"><button class="button" value="Wanderer"
+										id="toStage5">Continue</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-buttons">
+					<button class="button" title="back" onclick="prevStage(4)">back</button>
+				</div>
 			</div>
+			<div class="card" id="stage5">
+				<div class="card-title">Write your Character's Story</div>
+				<div class="card-content">
+					<textarea onkeyup="textareaCounter(this.value)" id="textarea" cols="30" rows="10" maxlength="1200"
+						autocomplete="off"></textarea>
+					<span id="charcount"></span>
+				</div>
+				<div class="card-buttons">
+					<button class="button" title="back" onclick="prevStage(5)">back</button>
+					<button class="button" title="Continue" id="toStage6">Save Character</button>
+				</div>
+			</div>
+			<div class="card" id="stage6">
+				<div class="card-title">
+					<h3>Character Completed!</h3>
+				</div>
+				<div class="card-content">
+
+				</div>
+				<div class="card-buttons">
+					<button class="button" title="back" onclick="prevStage(6)">Back</button>
+					<a href="index.html"><button class="button" title="Add new Character" id="reload">Add new
+							Character</button></a>
+					<a href="print-character.html" target="_blank"><button class="button" title="Saved Characters">Saved
+							Characters</button></a>
+				</div>
+			</div>
+
 		</div>
-		<div class="card" id="stage5">
-			<div class="card-title">Write your Character's Story</div>
-			<div class="card-content">
-				<textarea onkeyup="textareaCounter(this.value)" id="textarea" cols="30" rows="10" maxlength="1200"
-					autocomplete="off"></textarea>
-				<span id="charcount"></span>
-			</div>
-			<div class="card-buttons">
-				<button class="button" title="back" onclick="prevStage(5)">back</button>
-				<button class="button" title="Continue" id="toStage6">Save Character</button>
-			</div>
-		</div>
-		<div class="card" id="stage6">
-			<div class="card-title">
-				<h3>Character Completed!</h3>
-			</div>
-			<div class="card-content">
-
-			</div>
-			<div class="card-buttons">
-				<button class="button" title="back" onclick="prevStage(6)">Back</button>
-				<a href="index.html"><button class="button" title="Add new Character" id="reload">Add new
-						Character</button></a>
-				<a href="print-character.html" target="_blank"><button class="button" title="Saved Characters">Saved
-						Characters</button></a>
-			</div>
-		</div>
-
-	</div>
 
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"
-		integrity="sha512-suUtSPkqYmFd5Ls30Nz6bjDX+TCcfEzhFfqjijfdggsaFZoylvTj+2odBzshs0TCwYrYZhQeCgHgJEkncb2YVQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"
+			integrity="sha512-suUtSPkqYmFd5Ls30Nz6bjDX+TCcfEzhFfqjijfdggsaFZoylvTj+2odBzshs0TCwYrYZhQeCgHgJEkncb2YVQ=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-	<script src="app.js"></script>
-	<script src="character.js"></script>
+		<script src="app.js"></script>
+		<script src="character.js"></script>
 
-	<script async defer src="https://buttons.github.io/buttons.js"></script>
-</body>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+	</body>
 
 </html>
