@@ -12,7 +12,7 @@ You can choose a Name, Gender, Race, Class, Background and a custom Story for yo
 
 ## Live Demo
 
-[lotr-cc.ucielsola.com](https://lotr-cc.ucielsola.com)
+[lotr-cc.ucielsola.me](https://lotr-cc.ucielsola.me)
 
 ## External Resources
 
